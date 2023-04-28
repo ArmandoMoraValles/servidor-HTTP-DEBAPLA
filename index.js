@@ -7,14 +7,12 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   const url = req.url;
 
+  // no me gusta el switch case :C 
   let contentType;
-  if (url.endsWith('.html')) {
-    contentType = 'text/html';
-  } else if (url.endsWith('.json')) {
-    contentType = 'application/json';
-  } else if (url.endsWith('.txt')) {
-    contentType = 'text/plain';
-  }
+  if (url.endsWith('.html')) contentType = 'text/html';
+  if (url.endsWith('.json')) contentType = 'application/json';
+  if (url.endsWith('.txt')) contentType = 'text/plain';
+  //Se pueden agregar mas extensiones de archivos
 
   if (contentType) {
     fs.readFile(`.${url}`, (err, data) => {
