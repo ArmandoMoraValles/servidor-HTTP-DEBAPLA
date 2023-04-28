@@ -1,6 +1,4 @@
-# Project Title
-
-Práctica | Mi primer servidor HTTP
+# Práctica | Mi primer servidor HTTP
 
 ## Getting Started
 
